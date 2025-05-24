@@ -2,7 +2,7 @@
 import 'package:eschool/utils/errorMessageKeysAndCodes.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
+//import 'package:flutter_stripe/flutter_stripe.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class StripeService {
@@ -13,10 +13,10 @@ class StripeService {
   static String paymentApiUrl = '${StripeService.apiBase}/payment_intents';
 
   static init(String? stripeId, String? stripeMode) {
-    Stripe.publishableKey = stripeId ?? '';
+    //Stripe.publishableKey = stripeId ?? '';
   }
 
-  static payWithPaymentSheet({
+/*  static payWithPaymentSheet({
     String amount = "0",
     String currency = 'INR',
     String clientSecret = '',
@@ -38,7 +38,7 @@ class StripeService {
     } catch (e) {
       throw Exception(ErrorMessageKeysAndCode.defaultErrorMessageCode);
     }
-  }
+  }*/
 
   static StripeTransactionResponse getPlatformExceptionErrorResult(err) {
     String message = 'Something went wrong';

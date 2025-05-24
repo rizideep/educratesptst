@@ -17,3 +17,10 @@
 
 # Keep Razorpay classes and any other relevant classes
 -keep class com.razorpay.** { *; }
+# Prevent R8 from removing or trying to resolve BackEvent class
+-dontwarn android.window.BackEvent
+-dontwarn android.view.WindowOnBackInvokedDispatcher
+-dontwarn android.window.OnBackInvokedCallback
+# Keep FlutterView even if it references newer APIs
+-keep class io.flutter.view.FlutterView { *; }
+

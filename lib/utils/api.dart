@@ -24,7 +24,7 @@ class Api {
     final schoolCode = AuthRepository().schoolCode;
 
     if (kDebugMode) {
-      print(jwtToken);
+      print("jwtToken"+jwtToken);
     }
 
     return {

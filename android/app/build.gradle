@@ -34,7 +34,7 @@ def keystoreProperties = new Properties()
    }
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 35
     namespace 'com.educrates.ptst.dev'  // <-- Add this line
     compileOptions {
         coreLibraryDesugaringEnabled true  
@@ -64,10 +64,10 @@ android {
     }
       signingConfigs {
        release {
-           keyAlias keystoreProperties['keyAlias']
-           keyPassword keystoreProperties['keyPassword']
+           keyAlias keystoreProperties['edu']
+           keyPassword keystoreProperties['8126903617']
            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-           storePassword keystoreProperties['storePassword']
+           storePassword keystoreProperties['8126903617']
        }
    }
 
@@ -75,9 +75,13 @@ android {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
-            // signingConfig signingConfigs.release
-          
+           // signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+
         }
     }
     namespace 'com.educrates.ptst.dev'

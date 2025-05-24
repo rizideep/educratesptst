@@ -30,6 +30,8 @@ class _StudentOnbordingScreenState extends State<StudentOnbordingScreen> {
   Future<void> _checkFirstTimeUser() async {
     var box = await Hive.openBox(studentBoxKey);
     bool isFirstTime = box.get('isFirstTimestudent', defaultValue: true);
+    String token = Hive.box(authBoxKey).get(jwtTokenKey) ?? "";
+    print("jwtToken on onboarding: "+token);
     if (isFirstTime) {
       await box.put('isFirstTimestudent', false);
 

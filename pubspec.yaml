@@ -48,13 +48,13 @@ dependencies:
   shimmer: ^3.0.0
   path_provider: ^2.0.15
   url_launcher: ^6.1.12
-  youtube_player_flutter: ^8.1.2
-  flutter_inappwebview: ^5.7.2
+  youtube_player_flutter: ^9.1.0
+  flutter_inappwebview: ^6.1.1
   file_picker: ^8.1.2
   permission_handler: ^11.1.0
   timeago: ^3.5.0
   firebase_messaging: ^15.1.5
-  firebase_core: ^3.8.0
+  firebase_core: ^3.12.1
   awesome_notifications: ^0.10.0
   carousel_slider:
   flutter_widget_from_html: 
@@ -65,7 +65,7 @@ dependencies:
   wakelock_plus: 
   flutter_animate: ^4.2.0+1
   device_info_plus:
-  flutter_stripe:
+  #flutter_stripe: ^11.0.0
   readmore:
   shared_preferences:
   razorpay_flutter:
@@ -73,9 +73,12 @@ dependencies:
   web_socket_channel:
   image_picker: ^1.1.2
   flutter_local_notifications: ^18.0.1
+  chewie: 1.7.0
+  #stripe_platform_interface: 11.2.0
 
 
-  
+
+
 
 
 dev_dependencies:
@@ -84,7 +87,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.14.1
-  webview_flutter_android: 3.16.1
+  webview_flutter_android: 4.3.2
 
 
 

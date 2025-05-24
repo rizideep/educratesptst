@@ -30,7 +30,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_stripe/flutter_stripe.dart';
+//import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/get.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
@@ -169,7 +169,7 @@ class _ChildFeeDetailsScreenState extends State<ChildFeeDetailsScreen> {
   }
 
   ///[To make payment using stripe sdk]
-  void payWithStripe({required String stripePublishableKey}) async {
+/*  void payWithStripe({required String stripePublishableKey}) async {
     try {
       Stripe.publishableKey = stripePublishableKey;
 
@@ -223,7 +223,7 @@ class _ChildFeeDetailsScreenState extends State<ChildFeeDetailsScreen> {
               ErrorMessageKeysAndCode.defaultErrorMessageKey),
           backgroundColor: Theme.of(context).colorScheme.error);
     }
-  }
+  }*/
 
   void prePaymentTasksListener(
       BuildContext context, PrePaymentTasksState state) {
@@ -235,7 +235,7 @@ class _ChildFeeDetailsScreenState extends State<ChildFeeDetailsScreen> {
           backgroundColor: Theme.of(context).colorScheme.error);
     } else if (state is PrePaymentTasksSuccess) {
       if (state.paymentMethod.paymentMethod == stripePaymentMethodKey) {
-        payWithStripe(stripePublishableKey: state.paymentMethod.apiKey ?? "");
+        //payWithStripe(stripePublishableKey: state.paymentMethod.apiKey ?? "");
       } else if (state.paymentMethod.paymentMethod ==
           razorpayPaymentMethodKey) {
         payWithRazorpay(razorpayApiKey: state.paymentMethod.apiKey ?? "");
