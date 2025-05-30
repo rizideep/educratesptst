@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 import 'package:video_player/video_player.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+ 
 
 class PlayVideoScreen extends StatefulWidget {
   final List<StudyMaterial> relatedVideos;

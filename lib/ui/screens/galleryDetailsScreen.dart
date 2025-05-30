@@ -11,7 +11,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:readmore/readmore.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
-
 class GalleryDetailsScreen extends StatefulWidget {
   final Gallery gallery;
   final SessionYear sessionYear;
