@@ -23,4 +23,5 @@
 -dontwarn android.window.OnBackInvokedCallback
 # Keep FlutterView even if it references newer APIs
 -keep class io.flutter.view.FlutterView { *; }
+-dontwarn android.window.BackEvent
 
