@@ -1,9 +1,11 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:eschool/data/repositories/authRepository.dart';
 import 'package:eschool/utils/constants.dart';
 import 'package:eschool/utils/errorMessageKeysAndCodes.dart';
+import 'package:eschool/utils/util.dart';
 import 'package:flutter/foundation.dart';
 
 class ApiException implements Exception {
@@ -24,7 +26,7 @@ class Api {
     final schoolCode = AuthRepository().schoolCode;
 
     if (kDebugMode) {
-      print("jwtToken"+jwtToken);
+      print("jwtToken " + jwtToken);
     }
 
     return {
@@ -50,6 +52,7 @@ class Api {
   static String readMessages = "${databaseUrl}message/read";
   static String deleteMessages = "${databaseUrl}delete/message";
   static String schoolDetails = "${databaseUrl}school-details";
+
   //
 
   //
@@ -58,6 +61,7 @@ class Api {
   static String studentLogin = "${databaseUrl}student/login";
   static String studentProfile = "${databaseUrl}student/get-profile-data";
   static String studentSubjects = "${databaseUrl}student/subjects";
+
   //get subjects of given class
   static String classSubjects = "${databaseUrl}student/class-subjects";
   static String studentTimeTable = "${databaseUrl}student/timetable";
@@ -183,10 +187,12 @@ class Api {
       final Dio dio = Dio();
       final FormData formData =
           FormData.fromMap(body, ListFormat.multiCompatible);
+
       if (kDebugMode) {
-        print("API Called POST: $url with $body");
-        print("Body Params: $body");
+        MyUtil.printV("API token  $headers()");
+        MyUtil.printWW("API Called POST: $url with $body");
       }
+
       final response = await dio.post(
         url,
         data: formData,
@@ -196,14 +202,14 @@ class Api {
         onSendProgress: onSendProgress,
         options: useAuthToken ? Options(headers: headers()) : null,
       );
-
+      if (kDebugMode) {
+        MyUtil.printW("$url API response: ${response.data}");
+      }
       if (bool.parse(response.data['error'].toString())) {
         throw ApiException(response.data['message'].toString());
       }
 
-      if (kDebugMode) {
-        print("Response: ${response.data}");
-      }
+
       return Map.from(response.data);
     } on DioException catch (e) {
       if (kDebugMode) {
@@ -234,8 +240,8 @@ class Api {
       final Dio dio = Dio();
 
       if (kDebugMode) {
-        print(url);
-        print(queryParameters);
+        MyUtil.printV("API token  $jsonDecode(${headers()})");
+        MyUtil.printWW("API Called GET: $url with $queryParameters");
       }
 
       final response = await dio.get(
@@ -243,6 +249,9 @@ class Api {
         queryParameters: queryParameters,
         options: useAuthToken ? Options(headers: headers()) : null,
       );
+      if (kDebugMode) {
+        MyUtil.printW("$url API response: ${response.data}");
+      }
 
       if (response.data['error']) {
         if (kDebugMode) {
