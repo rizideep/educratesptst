@@ -31,7 +31,7 @@ class Api {
 
     return {
       "Authorization": "Bearer $jwtToken",
-      "school_code": schoolCode,
+      "school-code": schoolCode,
       "Accept": "application/json",
     };
   }
