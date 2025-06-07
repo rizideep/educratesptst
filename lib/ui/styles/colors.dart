@@ -2,13 +2,15 @@
 
 import 'package:flutter/material.dart';
 
-const Color primaryColor = Color(0xff22577A);
-const Color secondaryColor = Color(0xff212121);
-const Color pageBackgroundColor = Color(0xffFFFFFF);
-const Color backgroundColor = Color(0xfff6f6f6);
+
+const Color primaryColor = const Color(0xff1A237E);
+const Color secondaryColor = const Color(0xff2E2E2E);
+const Color pageBackgroundColor = const Color(0xffF5F5F5);
+const Color backgroundColor = const Color(0xffFFFFFF);
+const Color errorColor = const Color(0xffBA1A1A);
+const Color tertiaryColor = const Color(0xffEBEEF3); //Border color define in design style
 
 //
-const Color errorColor = Color(0xffff6769);
 const Color onBackgroundColor = Color(0xff484848);
 const Color onPrimaryColor = Color(0xff3bcc97);
 const Color onSecondaryColor = Color(0xff57cc99);

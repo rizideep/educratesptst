@@ -271,7 +271,7 @@ class _StudentProfileScreenState extends State<StudentProfileScreen> {
                   _buildProfileDetailsTile(
                     label: Utils.getTranslatedLabel(rollNumberKey),
                     value: studentDetails.rollNumber.toString(),
-                    iconUrl: Utils.getImagePath("Hello.svg"),
+                    iconUrl: Utils.getImagePath("default_profile.svg"),
                   ),
                   _buildProfileDetailsTile(
                     label: Utils.getTranslatedLabel(dateOfBirthKey),
