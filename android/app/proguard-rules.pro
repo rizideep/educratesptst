@@ -14,6 +14,16 @@
 # Keep ProGuard annotations to avoid removal
 -keep class proguard.annotation.Keep { *; }
 -keep class proguard.annotation.KeepClassMembers { *; }
+# Prevent R8 from stripping BackEvent class used in Android 14+
+-keep class android.window.BackEvent { *; }
+
+# Keep FlutterActivity methods that use BackEvent
+-keep class io.flutter.embedding.android.FlutterActivity {
+    void startBackGesture(android.window.BackEvent);
+    void onBackGestureProgress(android.window.BackEvent);
+    void onBackGestureCancelled();
+    void onBackGestureComplete();
+}
 
 # Keep Razorpay classes and any other relevant classes
 -keep class com.razorpay.** { *; }
