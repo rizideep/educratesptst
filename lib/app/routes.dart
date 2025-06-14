@@ -153,7 +153,7 @@ class Routes {
         name: parentChildDetails,
         page: () => ChildDetailsScreen.routeInstance()),
     GetPage(name: topicDetails, page: () => TopicDetailsScreen.routeInstance()),
-    GetPage(name: playVideo, page: () => PlayVideoScreen.routeInstance()),
+   // GetPage(name: playVideo, page: () => PlayVideoScreen.routeInstance()),
     GetPage(
         name: childAssignments,
         page: () => ChildAssignmentsScreen.routeInstance()),

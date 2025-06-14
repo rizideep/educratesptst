@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:readmore/readmore.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
 class GalleryDetailsScreen extends StatefulWidget {
   final Gallery gallery;
   final SessionYear sessionYear;
@@ -41,7 +41,7 @@ class _GalleryDetailsScreenState extends State<GalleryDetailsScreen> {
       width: MediaQuery.of(context).size.width,
       height: 60,
       decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primary.withOpacity( 0.08),
+          color: Theme.of(context).colorScheme.primary.withOpacity(0.08),
           borderRadius:
               BorderRadius.circular(Utils.bottomSheetTopRadius * (0.5))),
       child: LayoutBuilder(builder: (context, boxConstraints) {
@@ -86,7 +86,7 @@ class _GalleryDetailsScreenState extends State<GalleryDetailsScreen> {
                 ),
               ),
             ),
-            Align(
+           /* Align(
               alignment: AlignmentDirectional.centerEnd,
               child: GestureDetector(
                 onTap: () {
@@ -107,7 +107,7 @@ class _GalleryDetailsScreenState extends State<GalleryDetailsScreen> {
                   ),
                 ),
               ),
-            ),
+            ),*/
           ],
         );
       }),
@@ -160,7 +160,7 @@ class _GalleryDetailsScreenState extends State<GalleryDetailsScreen> {
     });
   }
 
-  Widget _buildVideosContainer() {
+ /* Widget _buildVideosContainer() {
     return Column(
       children: widget.gallery
           .getVideos()
@@ -172,7 +172,7 @@ class _GalleryDetailsScreenState extends State<GalleryDetailsScreen> {
                     color: Theme.of(context)
                         .colorScheme
                         .secondary
-                        .withOpacity( 0.1),
+                        .withOpacity(0.1),
                     borderRadius:
                         BorderRadius.circular(Utils.bottomSheetTopRadius)),
                 child: Stack(
@@ -219,7 +219,7 @@ class _GalleryDetailsScreenState extends State<GalleryDetailsScreen> {
               ))
           .toList(),
     );
-  }
+  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -257,7 +257,7 @@ class _GalleryDetailsScreenState extends State<GalleryDetailsScreen> {
                     color: Theme.of(context)
                         .colorScheme
                         .secondary
-                        .withOpacity( 0.65)),
+                        .withOpacity(0.65)),
                 trimExpandedText: '',
                 moreStyle: TextStyle(fontWeight: FontWeight.bold),
               ),
@@ -270,9 +270,10 @@ class _GalleryDetailsScreenState extends State<GalleryDetailsScreen> {
               ),
               AnimatedSwitcher(
                 duration: tabChangeAnimationDuration,
-                child: selectedTabTitleKey == photosKey
+                child: _buildPhotosContainer(),
+                /*child: selectedTabTitleKey == photosKey
                     ? _buildPhotosContainer()
-                    : _buildVideosContainer(),
+                    : _buildVideosContainer(),*/
               ),
               const SizedBox(
                 height: 25,
