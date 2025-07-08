@@ -1,4 +1,4 @@
-package com.educrates.ptst.dev
+package com.educrates.app.student
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 
