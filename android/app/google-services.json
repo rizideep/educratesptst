@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:88501133159:android:1d5dd347f687a8e742d9c2",
         "android_client_info": {
-          "package_name": "com.educrates.ptst.dev"
+          "package_name": "com.educrates.app.student"
         }
       },
       "oauth_client": [],
