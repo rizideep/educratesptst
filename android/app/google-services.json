@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "88501133159",
-    "project_id": "educratesptst",
-    "storage_bucket": "educratesptst.firebasestorage.app"
+    "project_number": "427259367788",
+    "project_id": "educrates-student",
+    "storage_bucket": "educrates-student.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:88501133159:android:1d5dd347f687a8e742d9c2",
+        "mobilesdk_app_id": "1:427259367788:android:151cf0ac61e93f3b2c2349",
         "android_client_info": {
-          "package_name": "com.educrates.app.student"
+          "package_name": "com.educrates.student"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCSTdnXjPSHNiJQorg9YtXNTzElZ88gTbo"
+          "current_key": "AIzaSyBw7gdV1ywJC8dIPX2LrPO7ohCSXZy5oGY"
         }
       ],
       "services": {

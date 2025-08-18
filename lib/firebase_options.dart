@@ -63,6 +63,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '539033120705',
     projectId: 'e-school-saas',
     storageBucket: 'e-school-saas.appspot.com',
-    iosBundleId: 'com.educrates.app.student',
+    iosBundleId: 'com.educrates.student',
   );
 }
